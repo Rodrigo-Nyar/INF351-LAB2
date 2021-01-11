@@ -1,0 +1,56 @@
+<!-- 
+Verano 2020, INF 351 - LABORATORIO 2
+Desarrollado por Rodrigo Javier Castillo Guzman
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laboratorio 2</title>
+</head>
+<body>
+	<h2>
+		Verano 2020, INF 351 - LABORATORIO 2
+		<br>
+		Rodrigo Javier Castillo Guzmán 
+		<br>
+		<hr>
+	</h2>
+	
+	<form>
+		
+		Use sólo letras mayúsculas en inglés para referirse a las variables, separadas por una coma. Ex: A,B,C &rarr; E,Z		
+		<br>
+		<label><b>Nueva Regla:</b></label>
+		<input type="text" id="hiptosisText"> 
+		&rarr; 
+		<input type="text" id="implicacionText">		
+		<input type="submit" value="Añadir Regla" onclick="nuevaRegla()">
+		<br>
+		Ingrese múltiples reglas, una por línea, en formato.
+		<br>
+
+		<textarea rows="4" cols="50" id="multiplesReglasText" form="usrform" placeholder="Ex:&#13;A,B>C,D&#13;A>C"></textarea><br>
+		<input type="submit" value="Añadir Múltiples Reglas" onclick="nuevasReglas()">
+		<hr>
+		<input type="radio" id="atras" name="control" value="atras">
+		<label for="male">Control Atrás</label><br>
+		<input type="radio" id="adelante" name="control" value="adelante" checked>
+		<label for="female">Control Adelante</label><br>
+		<br>
+		<label><b>Hechos:</b></label>
+		<input type="text" id="hechosText">
+		<label><b>Inferir:</b></label>
+		<input type="text" id="InferirText">
+		<input type="submit" value="Calcular" onclick="calcular()">
+		<br><br>
+		<div id="ResultadoDiv" style="border-style: solid;"></div>
+		<div id="reglasDiv" style="border-style: solid;"></div>
+		<script src="lab2.js"></script>
+		<br>
+		<input type="submit" value="Limpiar" onclick="window.location.reload();">
+	</form>
+	
+	
+	
+</body>
+</html>
